@@ -1,12 +1,11 @@
 #content{
     display: grid;
-    grid-template-rows: 150px 50px auto 50px auto;
-    grid-template-columns: 2fr 2fr 4fr;
+    grid-template-rows: 150px 50px minmax(700px, 900px) auto;
+    grid-template-columns: 2fr 2fr 5fr;
     grid-template-areas: 
     "header title title" 
     ". . ." 
     "image image article"
-    ". . article"
     "highlight highlight article";
 }
 
@@ -57,6 +56,10 @@
 picture{
     grid-area: image;
         padding: 10px;
+        display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 img{
     max-width: 100%;

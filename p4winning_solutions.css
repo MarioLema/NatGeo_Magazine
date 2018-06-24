@@ -1,9 +1,8 @@
 #content{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 3fr 2fr 1fr;
+    grid-template-rows: 5fr 1fr;
     grid-template-areas: 
-    "triocup algae"
     "triocup evoware"
     "sachet delta";
     font-family: 'Merriweather', serif;
@@ -16,12 +15,16 @@
     border-right: solid black 1px;
     margin-bottom: 20px;
     margin-top: 20px;
+        display: flex;
+    flex-direction: column;
 }
 #tag{
     font-size: 0.8em;
 }
 #evoware{
     grid-area:evoware;
+}
+#evoware div{
     padding: 0px 10px 20px 80px;
 }
 #delta{
@@ -30,11 +33,9 @@
     background: white;
 }
 #algae{
-    grid-area: algae;
     padding: 20px;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    max-width: 100%;
 }
 #sachet{
     grid-area: sachet;
@@ -46,11 +47,13 @@
 }
 #sachet img{
         object-fit: contain;
+            min-height: 200px;
 }
 #sheets{
     max-height: 150px;
     float: right;
         padding: 5px;
+            min-height: 300px;
 }
 #cup{
     grid-column: 2/-1;
@@ -58,9 +61,10 @@
     position: relative;
     right: 2%;
     display: flex;
-    width: 10%;
     align-self: center;
-    background: #f2ebc2;
+    max-height: 200px;
+    min-height: 100px;
+    margin: 25px;
 }
 h6{
     font-family: 'Montserrat', sans-serif;
@@ -78,10 +82,55 @@ h2{
     font-size: 3em;
     font-family: 'Merriweather', serif;
     font-weight: 400;
-    line-height: 0.8em;
     margin: 20px 0 5px 0;
 }
 p{
     margin: 0;
     line-height: 1.5em;
+}
+
+
+
+/*==========================================================*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 650px) {
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+#triocup {
+    display: flex;
+    flex-direction: column;
+    border-right: none;
+    border-bottom: solid black 5px;
+    margin: 10px;
+    padding: 20px;
+}
+#sheets {
+    padding: 5px;
+}
+#delta {
+    border-top: none;
+        padding: 20px;
+}
+#algae{
+    margin-top: 20px;
+        padding: 20px;
+}
+#evoware{
+    padding: 20px;
+}
+}
+/*=======================================================*/
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 650px) 
+and (max-device-width : 1024px) {
+#content{
+         grid-template-columns: 5fr 11fr;
 }

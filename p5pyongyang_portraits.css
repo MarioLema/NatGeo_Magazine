@@ -1,0 +1,73 @@
+#content{
+	display: grid;
+	grid-template-rows: 120px 80px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"header title"
+	"intro intro";
+}
+.section-header{
+    grid-area: header;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    border-right: solid rgb(255, 205, 5) 5px;
+    margin: 10px 0;
+    padding: 0.5em 4em;
+    font-size: 3em;
+}
+.article-title{
+	grid-area: title;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
+}
+#intro{
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr auto 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    ". shutter smallp photographer"
+    "natgeo shutter subhead volume";
+    border-top: solid black 1px;
+    border-bottom: solid black 5px;
+
+}
+#shutter{
+grid-area: shutter;
+    width: 120px;
+    margin: 10px;
+    padding: 0 30px;
+    border-left: solid rgb(255, 205, 5) 5px;
+    border-right: solid black 1px;
+}
+#intro p{
+    grid-area: smallp;
+    margin: 0;
+    padding: 5px;
+    font-size: 0.8em;
+}
+#photographer{
+	grid-area: photographer;
+}
+#natgeo{
+    grid-area: natgeo;
+    margin-right: 5px;
+    border-top: solid black 1px;
+    padding: 5px 20px 5px 10px;
+}
+#subhead{
+grid-area: subhead;
+    margin-right: 10px;
+    border-top: solid black 1px;
+    padding: 5px 20px 5px 10px;}
+#volume{
+	grid-area: volume;
+}
+h6{
+	margin:0;
+}
